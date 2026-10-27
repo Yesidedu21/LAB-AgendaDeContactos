@@ -9,11 +9,9 @@ public class Contacto {
         this.email = email;
     }
 
-    public void mostrarInfo(){
-        System.out.println("=== DATOS DE CONTACTO ===");
-        System.out.println("Nombre: " + this.nombre);
-        System.out.println("Telefono: " + this.telefono);
-        System.out.println("Email: " + this.email);
+    @Override
+    public String toString() {
+        return nombre + " | Telefono: " + telefono + " | Email: " + email;
     }
 
     public String getNombre() {
