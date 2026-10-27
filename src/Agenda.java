@@ -66,7 +66,12 @@ public class Agenda {
     }
 
     public void mostrarContactosPorGrupo(String nombreGrupo){
-
+        if (!listaContactosOrdenados.containsKey(nombreGrupo)){
+            System.out.println("Grupo no existe");
+        }
+        for (Map.Entry<String, Set<String>> entrada : listaContactosOrdenados.entrySet()){
+            System.out.println(entrada.getKey() + " - " + entrada.getValue().size());
+        }
     }
 
 
