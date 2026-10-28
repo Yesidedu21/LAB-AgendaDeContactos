@@ -36,7 +36,6 @@ public class Agenda {
     }
 
     public void listarContactos() {
-        System.out.println("--- LISTA DE CONTACTOS (orden alfabetico) ---");
         if (contactos.isEmpty()) {
             System.out.println("No hay contactos.");
             return;
@@ -48,7 +47,6 @@ public class Agenda {
 
 
     public void listarHistorial () {
-        System.out.println("--- HISTORIAL (orden de insercion) ---");
         if (historial.isEmpty()) {
             System.out.println("No hay contactos en el historial.");
             return;
@@ -86,7 +84,6 @@ public class Agenda {
 
 
     public void listarGrupos () {
-        System.out.println("--- GRUPOS (orden alfabetico) ---");
         if (grupos.isEmpty()) {
             System.out.println("No hay grupos.");
             return;
@@ -106,7 +103,6 @@ public class Agenda {
             System.out.println("El grupo '" + nombreGrupo + "' no tiene contactos");
             return;
         }
-        System.out.println("Contactos en '" + nombreGrupo + "':");
         for (String nombre : miembros) {
             System.out.println("- " + contactos.get(nombre));
         }
